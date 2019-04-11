@@ -3,13 +3,10 @@
 
 var $$Map = /* module */[];
 
-var TileLayer = /* module */[];
-
 var Marker = /* module */[];
 
 export {
   $$Map ,
-  TileLayer ,
   Marker ,
   
 }

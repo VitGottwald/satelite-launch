@@ -12,10 +12,8 @@ module Map = {
     "Map";
 };
 
-module TileLayer = {
-  [@bs.module "react-leaflet"] [@react.component]
-  external make: (~url: string) => React.element = "TileLayer";
-};
+[@genType.import ("react-leaflet", "TileLayer")] [@react.component]
+external tileLayer: (~url: string) => React.element = "";
 
 module Marker = {
   [@bs.module "react-leaflet"] [@react.component]

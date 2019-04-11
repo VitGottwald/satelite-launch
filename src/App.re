@@ -26,7 +26,7 @@ let make = () => {
        ->React.array}
     </ul>
     <Leaflet.Map center=(10., 10.) zoom=1 className=Styles.mapClass>
-      <Leaflet.TileLayer
+      <Leaflet.tileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {Data.cities

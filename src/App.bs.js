@@ -34,7 +34,7 @@ function App(Props) {
                   zoom: 1,
                   className: Styles$ReactTemplate.mapClass,
                   children: null
-                }, React.createElement(ReactLeaflet.TileLayer, {
+                }, React.createElement(LeafletGen.tileLayer, {
                       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     }), Belt_List.toArray(Belt_List.map(Data$ReactTemplate.cities, (function (city) {
                             return React.createElement(ReactLeaflet.Marker, {
