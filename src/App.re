@@ -10,9 +10,18 @@ let make = () =>
        ->List.toArray
        ->React.array}
     </ul>
-    <Leaflet.Map center=(10., 10.) zoom=4 className=Styles.mapClass>
+    <Leaflet.Map center=(10., 10.) zoom=1 className=Styles.mapClass>
       <Leaflet.TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
+      {Data.cities
+       ->List.map(city =>
+           <Leaflet.Marker
+             key={city.id}
+             position=(city.coordinates.lat, city.coordinates.lng)
+           />
+         )
+       ->List.toArray
+       ->React.array}
     </Leaflet.Map>
   </div>;

@@ -20,12 +20,20 @@ function App(Props) {
                     10,
                     10
                   ],
-                  zoom: 4,
+                  zoom: 1,
                   className: Styles$ReactTemplate.mapClass,
-                  children: React.createElement(ReactLeaflet.TileLayer, {
-                        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      })
-                }));
+                  children: null
+                }, React.createElement(ReactLeaflet.TileLayer, {
+                      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    }), Belt_List.toArray(Belt_List.map(Data$ReactTemplate.cities, (function (city) {
+                            return React.createElement(ReactLeaflet.Marker, {
+                                        position: /* tuple */[
+                                          city[/* coordinates */2][/* lat */0],
+                                          city[/* coordinates */2][/* lng */1]
+                                        ],
+                                        key: city[/* id */0]
+                                      });
+                          })))));
 }
 
 var make = App;
