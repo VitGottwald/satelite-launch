@@ -14,7 +14,7 @@ function s(prim) {
 }
 
 function App(Props) {
-  var match = UseMessageToast$ReactTemplate.hook(undefined, 1000, /* [] */0);
+  var match = UseMessageToast$ReactTemplate.hook(undefined, undefined, /* [] */0);
   var addMessage = match[1];
   return React.createElement("div", undefined, React.createElement("button", {
                   onClick: (function (param) {

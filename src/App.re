@@ -2,7 +2,7 @@ open Belt;
 let s = React.string;
 [@react.component]
 let make = () => {
-  let (messages, addMessage) = UseMessageToast.hook(~ttl=1000., []);
+  let (messages, addMessage) = UseMessageToast.hook([]);
   <div>
     <button
       onClick={_ =>
