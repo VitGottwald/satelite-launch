@@ -10,14 +10,23 @@ var mapClass = Emotion.css(undefined, /* :: */[
       /* :: */[
         Emotion.height(/* `px */[
               25096,
-              300
+              400
             ]),
         /* [] */0
       ]
     ]);
 
+var imageClass = Emotion.css(undefined, /* :: */[
+      Emotion.width(/* `px */[
+            25096,
+            150
+          ]),
+      /* [] */0
+    ]);
+
 export {
   mapClass ,
+  imageClass ,
   
 }
 /* mapClass Not a pure module */

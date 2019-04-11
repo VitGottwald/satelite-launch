@@ -18,8 +18,12 @@ let make = () =>
        ->List.map(city =>
            <Leaflet.Marker
              key={city.id}
-             position=(city.coordinates.lat, city.coordinates.lng)
-           />
+             position=(city.coordinates.lat, city.coordinates.lng)>
+             <Leaflet.Popup>
+               <p> city.name->s </p>
+               <img className=Styles.imageClass src={city.image.url} />
+             </Leaflet.Popup>
+           </Leaflet.Marker>
          )
        ->List.toArray
        ->React.array}

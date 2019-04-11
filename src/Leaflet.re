@@ -26,5 +26,5 @@ module Marker = {
 
 module Popup = {
   [@bs.module "react-leaflet"] [@react.component]
-  external make: (~children: React.element=?) => React.element = "Marker";
+  external make: (~children: React.element) => React.element = "Popup";
 };

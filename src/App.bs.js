@@ -31,6 +31,12 @@ function App(Props) {
                                           city[/* coordinates */2][/* lat */0],
                                           city[/* coordinates */2][/* lng */1]
                                         ],
+                                        children: React.createElement(ReactLeaflet.Popup, {
+                                              children: null
+                                            }, React.createElement("p", undefined, city[/* name */1]), React.createElement("img", {
+                                                  className: Styles$ReactTemplate.imageClass,
+                                                  src: city[/* image */3][/* url */0]
+                                                })),
                                         key: city[/* id */0]
                                       });
                           })))));
