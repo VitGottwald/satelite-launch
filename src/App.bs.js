@@ -3,6 +3,7 @@
 import * as Curry from "bs-platform/lib/es6/curry.js";
 import * as React from "react";
 import * as Belt_List from "bs-platform/lib/es6/belt_List.js";
+import * as LeafletGen from "./Leaflet.gen";
 import * as ReactLeaflet from "react-leaflet";
 import * as Data$ReactTemplate from "./Data.bs.js";
 import * as Styles$ReactTemplate from "./Styles.bs.js";
@@ -41,7 +42,7 @@ function App(Props) {
                                           city[/* coordinates */2][/* lat */0],
                                           city[/* coordinates */2][/* lng */1]
                                         ],
-                                        children: React.createElement(ReactLeaflet.Popup, {
+                                        children: React.createElement(LeafletGen.popup, {
                                               children: null
                                             }, React.createElement("p", undefined, city[/* name */1]), React.createElement("img", {
                                                   className: Styles$ReactTemplate.imageClass,

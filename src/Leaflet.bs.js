@@ -7,13 +7,10 @@ var TileLayer = /* module */[];
 
 var Marker = /* module */[];
 
-var Popup = /* module */[];
-
 export {
   $$Map ,
   TileLayer ,
   Marker ,
-  Popup ,
   
 }
 /* No side effect */

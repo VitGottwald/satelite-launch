@@ -2,7 +2,7 @@ open Belt;
 let s = React.string;
 [@react.component]
 let make = () => {
-  let (messages, addMessage) = UseMessageToast.hook(~ttl = 1000., []);
+  let (messages, addMessage) = UseMessageToast.hook(~ttl=1000., []);
   <div>
     <button
       onClick={_ =>
@@ -34,10 +34,10 @@ let make = () => {
            <Leaflet.Marker
              key={city.id}
              position=(city.coordinates.lat, city.coordinates.lng)>
-             <Leaflet.Popup>
+             <Leaflet.popup>
                <p> city.name->s </p>
                <img className=Styles.imageClass src={city.image.url} />
-             </Leaflet.Popup>
+             </Leaflet.popup>
            </Leaflet.Marker>
          )
        ->List.toArray

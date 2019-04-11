@@ -24,7 +24,5 @@ module Marker = {
     "Marker";
 };
 
-module Popup = {
-  [@bs.module "react-leaflet"] [@react.component]
-  external make: (~children: React.element) => React.element = "Popup";
-};
+[@genType.import ("react-leaflet", "Popup")] [@react.component]
+external popup: (~children: React.element) => React.element = "";

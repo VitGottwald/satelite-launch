@@ -25,6 +25,10 @@
   "gentypeconfig": {
     "language": "typescript",
     "importPath": "relative",
-    "exportInterfaces": false
+    "exportInterfaces": false,
+    "shims": {
+      "React": "React",
+      "ReasonReact": "React"
+    }
   }
 }
