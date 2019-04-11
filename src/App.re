@@ -1,8 +1,23 @@
 open Belt;
 let s = React.string;
 [@react.component]
-let make = () =>
+let make = () => {
+  let (messages, addMessage) = UseMessageToast.hook(~ttl = 1000., []);
   <div>
+    <button
+      onClick={_ =>
+        addMessage(
+          "--- Message --------" ++ Js.Float.toString(Js.Date.now()),
+        )
+      }>
+      "Add Message"->s
+    </button>
+    <ul>
+      {messages
+       ->List.map(message => <li> message.text->s </li>)
+       ->List.toArray
+       ->React.array}
+    </ul>
     <h1> "Cities"->s </h1>
     <ul>
       {Data.cities
@@ -29,3 +44,4 @@ let make = () =>
        ->React.array}
     </Leaflet.Map>
   </div>;
+};
