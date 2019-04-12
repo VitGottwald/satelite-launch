@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@opam/merlin": "*",
+    "@opam/reason": "*",
+    "ocaml": "4.2.x"
+  }
+}
