@@ -1,7 +1,7 @@
-import { ReactNode, ComponentType } from "react";
+import { ReactElement, ComponentType } from "react";
 
-export type reactElement = ReactNode
+export type reactElement = ReactElement
 
-export type element = ReactNode
+export type element = ReactElement
 
 export type componentLike<props, element> = ComponentType<props>

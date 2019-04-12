@@ -2,12 +2,17 @@
 
 import * as React from "react";
 import * as ReactDOMRe from "reason-react/src/ReactDOMRe.js";
-import * as App$ReactTemplate from "./App.bs.js";
+import * as IndexGen from "./Index.gen";
 import * as GlobalStyles$ReactTemplate from "./GlobalStyles.bs.js";
 
-ReactDOMRe.renderToElementWithId(React.createElement(App$ReactTemplate.make, { }), "root");
+var Mxxx = /* module */[];
+
+ReactDOMRe.renderToElementWithId(React.createElement(IndexGen.blah, {
+          text: "Karel"
+        }), "root");
 
 export {
+  Mxxx ,
   
 }
 /*  Not a pure module */

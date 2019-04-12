@@ -1,9 +1,11 @@
 open Belt;
 let s = React.string;
 [@react.component]
-let make = () => {
+[@genType]
+let make = (~sth) => {
   let (messages, addMessage) = UseMessageToast.hook([]);
   <div>
+    sth->s
     <button
       onClick={_ =>
         addMessage(

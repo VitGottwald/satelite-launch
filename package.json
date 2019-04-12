@@ -27,6 +27,7 @@
     "typescript": "^3.4.3"
   },
   "devDependencies": {
+    "@types/node": "^11.13.4",
     "@types/react-leaflet": "^2.2.1",
     "bs-emotion-ppx": "^0.0.6",
     "bs-platform": "5.0.1",
