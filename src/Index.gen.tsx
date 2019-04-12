@@ -3,10 +3,10 @@
 import {default as makeNotChecked} from './MessageToast';
 
 // In case of type error, check the type of 'make' in 'Index.re' and './MessageToast'.
-export const makeTypeChecked: React_componentLike<{ readonly text: string },React_element> = makeNotChecked;
+export const makeTypeChecked: React_componentLike<{ readonly header: string },React_element> = makeNotChecked;
 
 // Export 'make' early to allow circular import from the '.bs.js' file.
-export const make: unknown = makeTypeChecked as React_componentLike<{ readonly text: string },React_element>;
+export const make: unknown = makeTypeChecked as React_componentLike<{ readonly header: string },React_element>;
 
 import {componentLike as React_componentLike} from '../src/React.shim';
 

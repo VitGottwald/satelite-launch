@@ -2,7 +2,7 @@ include GlobalStyles;
 
 module MessageToast = {
   [@genType.import ("./MessageToast", "default")] [@react.component]
-  external make: (~text: string) => React.element = "";
+  external make: (~header: string) => React.element = "";
 };
 
-ReactDOMRe.renderToElementWithId(<MessageToast text="Karel" />, "root");
+ReactDOMRe.renderToElementWithId(<MessageToast header="Karel" />, "root");

@@ -1,5 +1,6 @@
 open Belt;
 let s = React.string;
+
 [@react.component]
 [@genType]
 let make = (~sth) => {

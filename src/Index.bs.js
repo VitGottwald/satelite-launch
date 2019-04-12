@@ -8,7 +8,7 @@ import * as GlobalStyles$ReactTemplate from "./GlobalStyles.bs.js";
 var MessageToast = /* module */[];
 
 ReactDOMRe.renderToElementWithId(React.createElement(IndexGen.make, {
-          text: "Karel"
+          header: "Karel"
         }), "root");
 
 export {
