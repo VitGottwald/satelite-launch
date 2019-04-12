@@ -1,8 +1,8 @@
 include GlobalStyles;
 
-module Mxxx = {
-  [@genType.import "./Blah.tsx"] [@react.component]
-  external blah: (~text: string) => React.element = "";
+module MessageToast = {
+  [@genType.import ("./MessageToast", "default")] [@react.component]
+  external make: (~text: string) => React.element = "";
 };
 
-ReactDOMRe.renderToElementWithId(<Mxxx.blah text="Karel" />, "root");
+ReactDOMRe.renderToElementWithId(<MessageToast text="Karel" />, "root");

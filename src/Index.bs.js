@@ -5,14 +5,14 @@ import * as ReactDOMRe from "reason-react/src/ReactDOMRe.js";
 import * as IndexGen from "./Index.gen";
 import * as GlobalStyles$ReactTemplate from "./GlobalStyles.bs.js";
 
-var Mxxx = /* module */[];
+var MessageToast = /* module */[];
 
-ReactDOMRe.renderToElementWithId(React.createElement(IndexGen.blah, {
+ReactDOMRe.renderToElementWithId(React.createElement(IndexGen.make, {
           text: "Karel"
         }), "root");
 
 export {
-  Mxxx ,
+  MessageToast ,
   
 }
 /*  Not a pure module */
