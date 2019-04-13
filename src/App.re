@@ -3,10 +3,10 @@ let s = React.string;
 
 [@react.component]
 [@genType]
-let make = (~sth) => {
+let make = (~header) => {
   let (messages, addMessage) = UseMessageToast.hook([]);
   <div>
-    sth->s
+    <h1> header->s </h1>
     <button
       onClick={_ =>
         addMessage(

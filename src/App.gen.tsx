@@ -5,4 +5,4 @@ const AppBS = require('./App.bs');
 
 import {reactElement as ReasonReact_reactElement} from '../src/React.shim';
 
-export const make: (_1:{ readonly sth: string }) => ReasonReact_reactElement = AppBS.make;
+export const make: (_1:{ readonly header: string }) => ReasonReact_reactElement = AppBS.make;

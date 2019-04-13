@@ -5,4 +5,7 @@ module MessageToast = {
   external make: (~header: string) => React.element = "";
 };
 
-ReactDOMRe.renderToElementWithId(<MessageToast header="Karel" />, "root");
+ReactDOMRe.renderToElementWithId(
+  <MessageToast header="Message Toast Header" />,
+  "root",
+);

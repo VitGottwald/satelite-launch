@@ -14,10 +14,10 @@ function s(prim) {
 }
 
 function App(Props) {
-  var sth = Props.sth;
+  var header = Props.header;
   var match = UseMessageToast$ReactTemplate.hook(undefined, undefined, /* [] */0);
   var addMessage = match[1];
-  return React.createElement("div", undefined, sth, React.createElement("button", {
+  return React.createElement("div", undefined, React.createElement("h1", undefined, header), React.createElement("button", {
                   onClick: (function (param) {
                       return Curry._1(addMessage, "--- Message --------" + Date.now().toString());
                     })
