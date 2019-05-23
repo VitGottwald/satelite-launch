@@ -9,4 +9,3 @@
 _esy
 esy.lock
 :merlin-log:
-build/**/*
