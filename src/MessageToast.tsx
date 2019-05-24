@@ -1,7 +1,7 @@
 import * as React from "react";
 import { make as App } from "./App.gen";
 
-const messageToast = ({ header }: { header: string }) => (
+const MessageToast = ({ header}: {header: string})=> (
   <>
     <div>
       <h1>{header}</h1>
@@ -10,4 +10,4 @@ const messageToast = ({ header }: { header: string }) => (
   </>
 );
 
-export default messageToast;
+export default MessageToast;
