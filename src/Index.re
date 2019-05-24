@@ -1,11 +1,8 @@
 include GlobalStyles;
 
-module MessageToast = {
-  [@genType.import ("./MessageToast", "default")] [@react.component]
-  external make: (~header: string) => React.element = "";
+module TSApp = {
+  [@genType.import ("./TSApp", "default")] [@react.component]
+  external make: (~title: string) => React.element = "";
 };
 
-ReactDOMRe.renderToElementWithId(
-  <MessageToast header="Message Toast Header" />,
-  "root",
-);
+ReactDOMRe.renderToElementWithId(<TSApp title="App" />, "root");

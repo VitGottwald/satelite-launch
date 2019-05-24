@@ -16,13 +16,9 @@ function nextExpire(messages) {
   return Belt_List.get(messages, 0);
 }
 
-function hook($staropt$star, $staropt$star$1, initialMessages) {
-  var now = $staropt$star !== undefined ? $staropt$star : (function (prim) {
-        return Date.now();
-      });
-  var ttl = $staropt$star$1 !== undefined ? $staropt$star$1 : 3000;
+function hook(param) {
   var match = React.useState((function () {
-          return initialMessages;
+          return /* [] */0;
         }));
   var setMessages = match[1];
   var messages = match[0];
@@ -31,7 +27,7 @@ function hook($staropt$star, $staropt$star$1, initialMessages) {
           if (match !== undefined) {
             var timeoutId = setTimeout((function (param) {
                     return Curry._1(setMessages, (function (messages) {
-                                  var partial_arg = Curry._1(now, /* () */0);
+                                  var partial_arg = Date.now();
                                   var partial_arg$1 = function (param) {
                                     return partial_arg > param[/* expires */0];
                                   };
@@ -39,7 +35,7 @@ function hook($staropt$star, $staropt$star$1, initialMessages) {
                                                 return !Curry._1(partial_arg$1, param);
                                               }));
                                 }));
-                  }), match[/* expires */0] - Curry._1(now, /* () */0) | 0);
+                  }), match[/* expires */0] - Date.now() | 0);
             return (function (param) {
                       clearTimeout(timeoutId);
                       return /* () */0;
@@ -51,7 +47,7 @@ function hook($staropt$star, $staropt$star$1, initialMessages) {
     return Curry._1(setMessages, (function (messages) {
                   return Belt_List.concat(messages, /* :: */[
                               /* record */[
-                                /* expires */Date.now() + ttl,
+                                /* expires */Date.now() + 3000,
                                 /* text */text
                               ],
                               /* [] */0
@@ -59,7 +55,7 @@ function hook($staropt$star, $staropt$star$1, initialMessages) {
                 }));
   };
   return /* tuple */[
-          messages,
+          Belt_List.toArray(messages),
           addMessage
         ];
 }

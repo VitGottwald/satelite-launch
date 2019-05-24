@@ -4,24 +4,8 @@ let s = React.string;
 [@react.component]
 [@genType]
 let make = (~header) => {
-  let (messages, addMessage) = UseMessageToast.hook([]);
   <div>
-    <h1> header->s </h1>
-    <button
-      onClick={_ =>
-        addMessage(
-          "--- Message --------" ++ Js.Float.toString(Js.Date.now()),
-        )
-      }>
-      "Add Message"->s
-    </button>
-    <ul>
-      {messages
-       ->List.map(message => <li> message.text->s </li>)
-       ->List.toArray
-       ->React.array}
-    </ul>
-    <h1> "Cities"->s </h1>
+    <h2> header->s </h2>
     <ul>
       {Data.cities
        ->List.map(city => <li key={city.id}> city.name->s </li>)

@@ -1,5 +1,6 @@
 open Belt;
 
+[@genType]
 type message = {
   expires: float,
   text: string,
@@ -12,8 +13,11 @@ let nextExpire = messages => {
   messages->List.get(0);
 };
 
-let hook = (~now=Js.Date.now, ~ttl=defaultTimeToLive, initialMessages) => {
-  let (messages, setMessages) = React.useState(() => initialMessages);
+[@genType]
+let hook = () => {
+  let (messages, setMessages) = React.useState(() => []);
+  let now = Js.Date.now;
+  let ttl = defaultTimeToLive;
   React.useEffect1(
     () =>
       switch (nextExpire(messages)) {
@@ -36,5 +40,5 @@ let hook = (~now=Js.Date.now, ~ttl=defaultTimeToLive, initialMessages) => {
     setMessages(messages =>
       List.concat(messages, [{expires: Js.Date.now() +. ttl, text}])
     );
-  (messages, addMessage);
+  (List.toArray(messages), addMessage);
 };
