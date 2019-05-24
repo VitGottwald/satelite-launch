@@ -13,7 +13,7 @@ function s(prim) {
   return prim;
 }
 
-function App(Props) {
+function WorldMap(Props) {
   var header = Props.header;
   var match = UseMessageToast$ReactTemplate.hook(undefined, undefined, /* [] */0);
   var addMessage = match[1];
@@ -54,7 +54,7 @@ function App(Props) {
                           })))));
 }
 
-var make = App;
+var make = WorldMap;
 
 export {
   s ,

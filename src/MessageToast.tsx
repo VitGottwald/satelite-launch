@@ -1,12 +1,12 @@
 import * as React from "react";
-import { make as App } from "./App.gen";
+import { make as WorldMap } from "./WorldMap.gen";
 
 const MessageToast = ({ header}: {header: string})=> (
   <>
     <div>
       <h1>{header}</h1>
     </div>
-    <App header="App Header" />
+    <WorldMap header="App Header" />
   </>
 );
 
