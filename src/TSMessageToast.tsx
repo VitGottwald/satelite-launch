@@ -19,5 +19,3 @@ const MessageToast = ({ header }: { header: string }) => {
 )};
 
 export default MessageToast;
-
-
