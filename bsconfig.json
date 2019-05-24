@@ -28,7 +28,9 @@
     "exportInterfaces": false,
     "shims": {
       "React": "React",
-      "ReasonReact": "React"
+      "ReasonReact": "React",
+      "ReasonPervasives": "ReasonPervasives",
+      "Belt": "Belt"
     }
   }
 }
