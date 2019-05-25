@@ -1,0 +1,7 @@
+semi: true
+trailingComma: es5
+tabWidth: 2
+singleQuote: true
+bracketSpacing: false
+printWidth: 72
+parser: babylon
