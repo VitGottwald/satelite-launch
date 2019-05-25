@@ -23,7 +23,7 @@
     "react": "16.8.6",
     "react-dom": "^16.2.0",
     "react-leaflet": "^2.2.1",
-    "reason-react": "github:reasonml/reason-react.git#45c362faf77eabac01921bf10a538ef5943f6ddb",
+    "reason-react": "^0.7.0",
     "typescript": "^3.4.3"
   },
   "devDependencies": {
