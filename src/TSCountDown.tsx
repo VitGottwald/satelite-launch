@@ -1,15 +1,11 @@
 import * as React from 'react';
 const {useState, useEffect} = React;
 
-const TSCountDown = ({
-  interval,
-  run,
-  onFinished,
-}: {
-  interval: number;
-  run: boolean;
-  onFinished: () => void;
-}) => {
+const useCountDown = (
+  interval: number,
+  run: boolean,
+  onFinished: () => void
+) => {
   const [timeToLaunch, setTimeToLaunch] = useState(interval);
 
   useEffect(() => {
@@ -25,6 +21,20 @@ const TSCountDown = ({
       }
     }
   }, [run, timeToLaunch, onFinished]);
+
+  return timeToLaunch;
+};
+
+const TSCountDown = ({
+  interval,
+  run,
+  onFinished,
+}: {
+  interval: number;
+  run: boolean;
+  onFinished: () => void;
+}) => {
+  const timeToLaunch = useCountDown(interval, run, onFinished);
 
   return <div className="countdown">{timeToLaunch}</div>;
 };
