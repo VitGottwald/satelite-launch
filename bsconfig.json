@@ -19,9 +19,9 @@
   ],
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": ["reason-react", "bs-emotion"],
+  "bs-dependencies": ["reason-react"],
   "refmt": 3,
-  "ppx-flags": ["bs-emotion-ppx/ppx" /*, "reactjs_jsx_ppx_v3.exe" */],
+  "ppx-flags": [],
   "gentypeconfig": {
     "language": "typescript",
     "importPath": "relative",
