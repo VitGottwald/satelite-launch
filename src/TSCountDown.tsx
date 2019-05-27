@@ -1,5 +1,5 @@
 import * as React from 'react';
-import useCountDown from './UseCountDown.gen';
+// import useCountDown from './UseCountDown.gen';
 
 const TSCountDown = ({
   interval,
@@ -10,7 +10,7 @@ const TSCountDown = ({
   run: boolean;
   onFinished: () => void;
 }) => {
-  const timeToLaunch = useCountDown(interval, run, onFinished);
+  const timeToLaunch = interval;
 
   return <div className="countdown">{timeToLaunch}</div>;
 };

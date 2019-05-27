@@ -3,7 +3,6 @@ import './App.css';
 import * as React from 'react';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
-import Falcon9 from './Falcon9.gen';
 
 const {useState, useCallback} = React;
 
@@ -17,7 +16,7 @@ const TSApp = () => {
   return (
     <div className="container">
       <div className="left">
-        <Falcon9 launch={countDownComplete} />
+        <span />
       </div>
       <div className="right">
         <TSCheckList onChange={setCheckListComplete} />
