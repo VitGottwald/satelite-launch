@@ -3,7 +3,6 @@
 import * as React from "react";
 import * as ReactDOMRe from "reason-react/src/ReactDOMRe.js";
 import * as IndexGen from "./Index.gen";
-import * as GlobalStyles$ReactTemplate from "./GlobalStyles.bs.js";
 
 var TSApp = /* module */[];
 
