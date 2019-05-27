@@ -3,29 +3,27 @@ import './App.css';
 import * as React from 'react';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
-import TSFalcon9 from './Falcon9.gen';
+import Falcon9 from './Falcon9.gen';
 
 const {useState, useCallback} = React;
 
 const TSApp = () => {
-  const [checkListCompleted, setCheckListCompleted] = useState(false);
-  const [countingFinished, setCountingFinished] = useState(false);
+  const [checkListComplete, setCheckListComplete] = useState(false);
+  const [countDownComplete, setCountDownComplete] = useState(false);
   const launch = useCallback(() => {
-    setCountingFinished(true);
+    setCountDownComplete(true);
   }, []);
-
-  const launchNow = checkListCompleted && countingFinished;
 
   return (
     <div className="container">
       <div className="left">
-        <TSFalcon9 launch={launchNow} />
+        <Falcon9 launch={countDownComplete} />
       </div>
       <div className="right">
-        <TSCheckList onChange={setCheckListCompleted} />
+        <TSCheckList onChange={setCheckListComplete} />
         <TSCountDown
           onFinished={launch}
-          run={checkListCompleted}
+          run={checkListComplete}
           interval={10}
         />
       </div>
