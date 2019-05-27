@@ -52,7 +52,7 @@ function $$default(interval, run, onFinished) {
           }
           
         }), /* tuple */[
-        timeToLaunch,
+        interval,
         run
       ]);
   return timeToLaunch;

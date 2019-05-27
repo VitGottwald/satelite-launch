@@ -18,7 +18,7 @@ let default = (interval, run, onFinished) => {
             None;
           }
         : None,
-    (timeToLaunch, run),
+    (interval, run),
   );
   timeToLaunch;
 };
