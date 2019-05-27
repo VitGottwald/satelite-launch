@@ -1,4 +1,3 @@
-[@genType]
 [@react.component]
 let make = (~className) => {
   <div className={j|rocket $(className)|j}>
@@ -7,3 +6,7 @@ let make = (~className) => {
     <Fire />
   </div>;
 };
+
+/* export as typescript component */
+[@genType]
+let default = make;

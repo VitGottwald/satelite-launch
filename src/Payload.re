@@ -4,4 +4,4 @@ external make: _ => React.element = "";
 
 /* export as typescript component */
 [@genType]
-let ts = make;
+let default = make;
