@@ -2,7 +2,7 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    /* "noUnusedParameters": true, */
     "strictNullChecks": true, // enable strict null checks as a best practice
     "jsx": "react", // use typescript to transpile jsx to js
     "allowJs": true, // allow a partial TypeScript and JavaScript codebase
