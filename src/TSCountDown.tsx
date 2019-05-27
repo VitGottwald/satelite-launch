@@ -23,8 +23,6 @@ const TSCountDown = ({
         onFinished();
         return;
       }
-    } else {
-      return;
     }
   }, [run, timeToLaunch, onFinished]);
 
