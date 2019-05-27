@@ -7,6 +7,6 @@ const Falcon9BS = require('./Falcon9.bs');
 
 import {reactElement as ReasonReact_reactElement} from '../src/React.shim';
 
-export const $$default: <T1>(_1:{ readonly className: T1 }) => ReasonReact_reactElement = Falcon9BS.default;
+export const $$default: (_1:{ readonly launch: boolean }) => ReasonReact_reactElement = Falcon9BS.default;
 
 export default $$default;

@@ -1,28 +1,25 @@
 import './App.css';
 
 import * as React from 'react';
-import TSMessageToast from './TSMessageToast';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
-import Falcon9 from './Falcon9.gen';
-import {make as MessageToast} from './MessageToast.gen';
+import TSFalcon9 from './Falcon9.gen';
 
-const {useState, useCallback, useReducer} = React;
+const {useState, useCallback} = React;
 
-const TSApp = ({title}: {title: string}) => {
+const TSApp = () => {
   const [checkListCompleted, setCheckListCompleted] = useState(false);
   const [countingFinished, setCountingFinished] = useState(false);
   const launch = useCallback(() => {
     setCountingFinished(true);
   }, []);
 
-  const animationClass =
-    checkListCompleted && countingFinished ? 'launched' : '';
+  const launchNow = checkListCompleted && countingFinished;
 
   return (
     <div className="container">
       <div className="left">
-        <Falcon9 className={animationClass} />
+        <TSFalcon9 launch={launchNow} />
       </div>
       <div className="right">
         <TSCheckList onChange={setCheckListCompleted} />

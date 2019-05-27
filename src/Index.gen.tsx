@@ -5,9 +5,9 @@
 import {default as makeNotChecked} from './TSApp';
 
 // In case of type error, check the type of 'make' in 'Index.re' and './TSApp'.
-export const makeTypeChecked: (_1:{ readonly title: string }) => React_element = makeNotChecked;
+export const makeTypeChecked: (_1:{}) => React_element = makeNotChecked;
 
 // Export 'make' early to allow circular import from the '.bs.js' file.
-export const make: unknown = makeTypeChecked as (_1:{ readonly title: string }) => React_element;
+export const make: unknown = makeTypeChecked as (_1:{}) => React_element;
 
 import {element as React_element} from '../src/React.shim';

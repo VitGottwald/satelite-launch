@@ -1,6 +1,7 @@
 [@react.component]
-let make = (~className) => {
-  <div className={j|rocket $(className)|j}>
+let make = (~launch) => {
+  let launchClass = launch ? "launched" : "";
+  <div className={j|rocket $(launchClass)|j}>
     <Payload />
     <Rocket />
     <Fire />

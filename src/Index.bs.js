@@ -8,9 +8,7 @@ var make = IndexGen.make;
 
 var TSApp = /* module */[/* make */make];
 
-ReactDOMRe.renderToElementWithId(React.createElement(make, {
-          title: "App"
-        }), "root");
+ReactDOMRe.renderToElementWithId(React.createElement(make, { }), "root");
 
 export {
   TSApp ,

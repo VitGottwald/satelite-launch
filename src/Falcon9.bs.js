@@ -6,9 +6,10 @@ import * as Rocket$ReactTemplate from "./Rocket.bs.js";
 import * as Payload$ReactTemplate from "./Payload.bs.js";
 
 function Falcon9(Props) {
-  var className = Props.className;
+  var launch = Props.launch;
+  var launchClass = launch ? "launched" : "";
   return React.createElement("div", {
-              className: "rocket " + (String(className) + "")
+              className: "rocket " + (String(launchClass) + "")
             }, React.createElement(Payload$ReactTemplate.make, { }), React.createElement(Rocket$ReactTemplate.make, { }), React.createElement(Fire$ReactTemplate.make, { }));
 }
 
