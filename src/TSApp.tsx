@@ -4,7 +4,7 @@ import * as React from 'react';
 import TSMessageToast from './TSMessageToast';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
-import TSFalcon9 from './TSFalcon9';
+import {make as TSFalcon9} from './Falcon9.gen';
 import {make as MessageToast} from './MessageToast.gen';
 
 const {useState, useCallback, useReducer} = React;
@@ -15,6 +15,7 @@ const TSApp = ({title}: {title: string}) => {
   const launch = useCallback(() => {
     setCountingFinished(true);
   }, []);
+
   const animationClass =
     checkListCompleted && countingFinished ? 'launched' : '';
 
