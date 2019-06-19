@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const outputDir = path.join(__dirname, 'build');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -21,6 +22,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'Index.css',
     }),
+    new ForkTsCheckerWebpackPlugin(),
   ],
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
@@ -28,8 +30,31 @@ module.exports = {
   },
   module: {
     rules: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      {test: /\.tsx?$/, loader: 'ts-loader'},
+      {
+        test: /\.ts$/,
+        include: [path.resolve(__dirname, 'src')],
+        loader: 'babel-loader',
+        options: {
+          plugins: [
+            ['@babel/plugin-transform-typescript', {isTSX: false}],
+          ],
+        },
+      },
+      {
+        test: /\.tsx$/,
+        include: [path.resolve(__dirname, 'src')],
+        loader: 'babel-loader',
+        options: {
+          plugins: [
+            ['@babel/plugin-transform-typescript', {isTSX: true}],
+          ],
+        },
+      },
+      {
+        test: /\.jsx?$/,
+        include: [path.resolve(__dirname, 'src')],
+        loader: 'babel-loader',
+      },
       {
         test: /\.css$/,
         use: [

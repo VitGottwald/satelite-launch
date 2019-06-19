@@ -9,7 +9,7 @@ const Rocket = () => (
     x="0px"
     y="0px"
     viewBox="0 0 512.002 512.002"
-    style={{enableBackground: 'new 0 0 512.002 512.002'}}
+    enableBackground="new 0 0 512.002 512.002"
     xmlSpace="preserve"
   >
     <path

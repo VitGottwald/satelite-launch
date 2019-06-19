@@ -9,7 +9,7 @@ const Fire = () => (
     x="0px"
     y="0px"
     viewBox="0 0 512 512"
-    style={{enableBackground: 'new 0 0 512 512'}}
+    enableBackground="new 0 0 512 512"
     xmlSpace="preserve"
   >
     <path
