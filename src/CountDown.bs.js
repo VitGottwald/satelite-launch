@@ -11,10 +11,10 @@ function CountDown(Props) {
   var interval = Props.interval;
   var run = Props.run;
   var onFinished = Props.onFinished;
-  var timeToLaunch = UseCountDown$ReactTemplate.$$default(interval, run, onFinished);
+  UseCountDown$ReactTemplate.$$default(interval, run, onFinished);
   return React.createElement("div", {
               className: "countdown"
-            }, String(timeToLaunch));
+            }, String(17));
 }
 
 var make = CountDown;

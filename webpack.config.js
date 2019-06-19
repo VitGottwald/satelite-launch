@@ -11,12 +11,13 @@ module.exports = {
   mode: isProd ? 'production' : 'development',
   output: {
     path: outputDir,
-    publicPath: outputDir,
+    publicPath: '/build',
     filename: 'Index.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      filename: 'index.html',
       inject: false,
     }),
     new MiniCssExtractPlugin({
@@ -51,7 +52,7 @@ module.exports = {
         },
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         include: [path.resolve(__dirname, 'src')],
         loader: 'babel-loader',
       },
@@ -60,7 +61,9 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {hmr: isProd},
+            options: {
+              hmr: !isProd,
+            },
           },
           'css-loader',
           {
@@ -77,11 +80,11 @@ module.exports = {
     ],
   },
   devServer: {
+    hot: true,
     compress: true,
     contentBase: outputDir,
     port: process.env.PORT || 8000,
     historyApiFallback: true,
-    watchContentBase: true,
-    writeToDisk: true,
+    index: 'index.html',
   },
 };
