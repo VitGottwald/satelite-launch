@@ -1,6 +1,6 @@
 # satelite-launch
 
-As presented at PragueJS on 28th May 2019
+ReasonReact dojo at Reason Prague, June 20th 2019
 
 ## initial setup
 
