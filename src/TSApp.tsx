@@ -4,7 +4,7 @@ import './App.css';
 import * as React from 'react';
 import TSCheckList from './TSCheckList';
 import TSCountDown from './TSCountDown';
-import TSPlaceHolder from './TSPlaceHolder';
+import TSPlaceholder from './TSPlaceholder';
 
 const {useState, useCallback} = React;
 
@@ -19,7 +19,7 @@ const TSApp = () => {
     <div className="container">
       <div className="left">
         {/* Falcon9 belongs here */}
-        <TSPlaceHolder />
+        <TSPlaceholder />
       </div>
       <div className="right">
         <TSCheckList onChange={setCheckListComplete} />
