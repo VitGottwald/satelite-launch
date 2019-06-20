@@ -11,7 +11,7 @@ module.exports = {
   mode: isProd ? 'production' : 'development',
   output: {
     path: outputDir,
-    publicPath: '/build',
+    publicPath: '/',
     filename: 'Index.js',
   },
   plugins: [
