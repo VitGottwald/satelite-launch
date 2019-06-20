@@ -4,7 +4,7 @@ ReasonReact dojo at Reason Prague, June 20th 2019
 
 ## initial setup
 
-Prereqs are git, npm/yarn, editor with https://github.com/jaredly/reason-language-server
+Prereqs are git, npm/yarn, editor with https://marketplace.visualstudio.com/items?itemName=jaredly.reason-vscode (https://github.com/jaredly/reason-language-server)
 
 ## Run Project
 
