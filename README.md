@@ -1,7 +1,7 @@
 # satelite-launch
 
 ReasonReact dojo at Reason Prague, June 20th 2019
-[video](https://github.com/VitGottwald/satelite-launch)
+[video](https://youtu.be/z6vkC4d8FhA)
 
 ## initial setup
 
